@@ -15,6 +15,11 @@ function Navbar() {
     }
   }
 
+  // 🔑 Role helpers
+  const isStudent = userRole === "STUDENT";
+  const isAdmin = userRole === "ADMIN" || userRole === "SUPER_ADMIN";
+  const isSuperAdmin = userRole === "SUPER_ADMIN";
+
   const logout = () => {
     localStorage.removeItem("token");
     navigate("/login");
@@ -34,22 +39,34 @@ function Navbar() {
 
       {token && (
         <>
-          {userRole === "STUDENT" && (
+          {/* STUDENT */}
+          {isStudent && (
             <Link to="/my-bookings" style={{ marginRight: "10px" }}>
               My Bookings
             </Link>
           )}
 
-          {userRole === "ADMIN" && (
+          {/* ADMIN + SUPER_ADMIN */}
+          {isAdmin && (
             <>
-              <Link to="/admin" style={{ marginRight: "10px" }}>Admin Panel</Link>
-              <Link to="/bookings" style={{ marginRight: "10px" }}>All Bookings</Link>
-              <Link to="/admin/slots" style={{ marginRight: "10px" }}>Manage Slots</Link>
+              <Link to="/admin" style={{ marginRight: "10px" }}>
+                Admin Dashboard
+              </Link>
+              <Link to="/bookings" style={{ marginRight: "10px" }}>
+                All Bookings
+              </Link>
+              <Link to="/admin/slots" style={{ marginRight: "10px" }}>
+                Manage Slots
+              </Link>
             </>
           )}
 
-    
-
+          {/* SUPER_ADMIN only */}
+          {isSuperAdmin && (
+            <Link to="/admin/manage-admins" style={{ marginRight: "10px" }}>
+              Manage Admins
+            </Link>
+          )}
 
           <button onClick={logout} style={{ marginLeft: "15px" }}>
             Logout

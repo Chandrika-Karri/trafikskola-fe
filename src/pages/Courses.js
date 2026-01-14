@@ -71,7 +71,7 @@ function Courses() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="container">
       <h2>Courses</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
 

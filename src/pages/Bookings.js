@@ -61,7 +61,7 @@ function Bookings() {
   const formatTime = (timeStr) => timeStr ? timeStr.substring(0, 5) : "";
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="container">
       <h2>{userRole === "ADMIN" ? "All Bookings (Admin)" : "My Bookings"}</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <ul>

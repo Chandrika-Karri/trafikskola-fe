@@ -48,7 +48,7 @@ function MyBookings() {
   const formatTime = (timeStr) => timeStr ? timeStr.substring(0, 5) : "";
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="container">
       <h2>My Bookings</h2>
       <ul>
         {bookings.map(b => {

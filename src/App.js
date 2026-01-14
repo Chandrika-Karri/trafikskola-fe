@@ -10,6 +10,10 @@ import Bookings from "./pages/Bookings";
 import PrivateRoute from "./components/PrivateRoute";
 import TimeSlots from "./pages/TimeSlots";  
 import AdminSlots from "./pages/AdminSlots";
+import ChangePasswordForm from "./components/ChangePasswordForm";
+import AdminManagement from "./pages/AdminManagement";
+import ForgotPasswordForm from "./pages/ForgotPasswordForm";
+import ResetPasswordForm from "./pages/ResetPasswordForm";
 
 
 function App() {
@@ -43,6 +47,16 @@ function App() {
             </PrivateRoute>
           }
         />
+
+        <Route
+          path="/admin/change-password"
+          element={
+          <PrivateRoute role="ADMIN">
+          <ChangePasswordForm />
+        </PrivateRoute>
+  }
+/>
+
         <Route
           path="/bookings"
           element={
@@ -62,9 +76,22 @@ function App() {
          }
        />
 
+       <Route
+         path="/admin/manage-admins"
+         element={
+        <PrivateRoute role="SUPER_ADMIN">
+          <AdminManagement />
+        </PrivateRoute>
+    }
+/>
+
+
 
         {/* Fallback: redirect unknown routes to home */}
         <Route path="*" element={<Home />} />
+
+        <Route path = "/forgot-password" element={<ForgotPasswordForm />} />
+        <Route path = "/reset-password" element={<ResetPasswordForm />} />
       </Routes>
     </Router>
   );

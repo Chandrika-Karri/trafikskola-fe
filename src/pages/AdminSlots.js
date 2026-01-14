@@ -54,7 +54,7 @@ function AdminSlots() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Admin – Create Time Slots</h2>
 
       {/* Course */}

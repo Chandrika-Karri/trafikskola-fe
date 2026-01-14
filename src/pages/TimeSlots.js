@@ -38,7 +38,7 @@ function TimeSlots() {
 
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="container">
       <h2>Available Time Slots</h2>
 
       <input

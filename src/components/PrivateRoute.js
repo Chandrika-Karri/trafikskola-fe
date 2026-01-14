@@ -8,7 +8,15 @@ function PrivateRoute({ children, role }) {
 
   const userRole = jwtDecode(token).role;
 
-  if (role && userRole !== role) return <Navigate to="/" />;
+  // ADMIN routes allow ADMIN + SUPER_ADMIN
+  if (role === "ADMIN" && !["ADMIN", "SUPER_ADMIN"].includes(userRole)) {
+    return <Navigate to="/" />;
+  }
+
+  // SUPER_ADMIN routes allow only SUPER_ADMIN
+  if (role === "SUPER_ADMIN" && userRole !== "SUPER_ADMIN") {
+    return <Navigate to="/" />;
+  }
 
   return children;
 }

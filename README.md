@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Trafikskola Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend part of my Trafikskola project.  
+It was built with React to practice building a real web user interface for a driving school app.
 
-## Available Scripts
+The frontend connects to a backend API (Spring Boot) to show and manage data.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🧠 What this project does
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project provides a user interface to interact with the Trafikskola backend.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+With this frontend you can:
 
-### `npm test`
+- Load and view data from the backend
+- Interact with the API
+- Practice frontend logic using React
+- See how a real web app talks to a backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was tested locally and is meant as a learning project.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React (created with Create React App)  
+- JavaScript (React components, state, routing)  
+- CSS (basic styles)  
+- Fetch API (to communicate with the backend)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you look at `package.json`, you’ll see all the libraries and scripts used. :contentReference[oaicite:2]{index=2}
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🖼 Project Structure (simplified)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+public/ # Static files like index.html
+src/
+├── components/ # React UI components
+├── pages/ # Pages / views
+├── App.js # Main app entry
+├── index.js # App bootstrapping
+package.json # Project config
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 How to run locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To use this frontend on your machine:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1. Clone the repo
+```bash
+git clone https://github.com/Chandrika-Karri/trafikskola-fe.git
 
-### Code Splitting
+2. Install dependencies
+Change into the project folder:
+cd trafikskola-fe
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Start the app
+npm start
 
-### Analyzing the Bundle Size
+This will:
+Start the React app in development mode
+Open it in your browser
+Reload on code changes
+Go to:
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Your browser should show the web interface and you can interact with it.
 
-### Making a Progressive Web App
+**🛠 What I learned**
+While working on this frontend, I practiced:
+Building React components
+Using the React Router for navigation (if used)
+Connecting the UI to a backend API
+Handling data fetching and rendering
+Structuring a React project for clarity
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
